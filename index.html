@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yeswanth</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <div class="container">
+            <nav>
+                <img src="images/logo.jpg" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header-text">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>FULL STACK DEVELOPER</p>
+                <h1>Hi, I'm <span>Y</span>eswanth<br>from Kumaraguru college of technology</h1>
+            </div>
+        </div>
+<!---------about-------------------->
+        <div id="About">
+            <div class="container">
+                <div class="row">
+                    <div class="About-col-1">
+                        <img src="images/image1.jpg">
+                    </div>
+                    <div class="About-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>
+                            I am an enthusiastic, self-motivated, reliable, responsible and hard working person. 
+                            I am a mature team worker and adaptable to all challenging situations.I am able to work well both in a team environment as well as using own initiative.
+                            I am able to work well under pressure and adhere to strict deadlines.
+
+                        </p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('Skills')">SKILLS</p>
+                            <p class="tab-links"onclick="opentab('Projects')">PROJECTS</p>
+                            <p class="tab-links"onclick="opentab('Education')">EDUCATION</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="Skills">
+                            <ul>
+                                <li><span>c++</span></li>
+                                <li><span>Front End Development</span><br><li>HTML</li><li>CSS</li><li>JAVASRCIPT</li><li>ANGULAR FRAMEWORK</li></li>
+                                <li><span>Full Stack Development</span><br><li>HTML</li><li>CSS</li><li>JAVASRCIPT</li><li>ANGULAR FRAMEWORK</li><li>Sql</li><li>Nosql</li><li>MongoDB</li></li>
+                                <li><span>UI Designer</span><br><li>Figma(Software)</li></li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="Projects">
+                            <ul>
+                                <li><span>PROJECT - 1</span><br>Smart Street Light And Smart Garbage Monitoring System(IOT)</li>
+                                <li><span>PROJECT - 2</span><br>Collision Avoidance System</li>
+                                <li><span>PROJECT - 3</span><br>jewellery Web Applictaion</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="Education">
+                            <ul>
+                                <li><span>2020 - 2024</span><br>Kumaraguru college of technology<br>B.E Computer science And Engineering</li>
+                                <li><span>2018 - 2021</span><br>Nachimuthu polytechnic College<br>Computer Engineering</li>
+                                <li><span>2018</span><br>Secondary School Certificate<br>R.G.Matric Higher Secondary School</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!---------------contact-------------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1><br>
+                <p>yeswanthraj1001@gmail.com</p><br>
+                <p>yeswanthraj.20CS@KCT.ac.in</p><br>
+                <p>Phone no:8248959502</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="images/RESUME-1.pdf" class="btn btn2">Download CV</a>
+            
+            </div>
+            <div class="contact-right">
+              <form>
+                <input type="text" name="name" placeholder="your name" required>
+                <input type="email" name="email" placeholder="your email" required>
+                <textarea name="Message" rows="6" placeholder="your Message" required></textarea>
+                <button type="submit" class="btn btn2">Submit</button>
+              </form> 
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Yeswanthraj.</p>
+    </div>
+</div>
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname){
+                for(tablink of tablinks)
+                {
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents)
+                {
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab"); 
+
+            }
+
+        </script>
+        <script>
+            var sidemeu =document.getElementById("sidemenu");
+            function openmenu(){
+                    sidemeu.style.right="0";
+
+            }
+            function closemenu(){
+                    sidemeu.style.right="-200px";
+
+            }
+
+        </script>
+    
+</body>
+</html>
